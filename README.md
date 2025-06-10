@@ -53,8 +53,8 @@ A state-of-the-art Retrieval-Augmented Generation system with cutting-edge featu
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/advanced-rag-system.git
-cd advanced-rag-system
+git clone https://github.com/saidulIslam1602/Retrieval-Augmented-Generation-Technique.git
+cd Retrieval-Augmented-Generation-Technique
 
 # Install dependencies
 pip install -r requirements_advanced.txt
@@ -72,9 +72,7 @@ python -m spacy download en_core_web_sm
 # Set your OpenAI API key
 export OPENAI_API_KEY="your-openai-api-key-here"
 
-# Optional: Configure other settings
-cp config_advanced.yaml config.yaml
-# Edit config.yaml as needed
+# Optional: Configure settings by editing config_advanced.yaml
 ```
 
 ### 3. Run the System
@@ -205,24 +203,14 @@ rag_system.add_feedback("query_id", rating=4.5, comments="Great answer!")
 
 ### Retrieval Strategies Flow
 
-```mermaid
-graph TD
-    A[User Query] --> B[Query Classifier]
-    B --> C{Query Type}
-    C -->|Factual| D[Dense Retrieval]
-    C -->|Analytical| E[Multi-Vector]
-    C -->|Complex| F[Hybrid Search]
-    C -->|Comparison| G[DPR Method]
-    
-    D --> H[Cross-Encoder Reranking]
-    E --> H
-    F --> H
-    G --> H
-    
-    H --> I[Response Generation]
-    I --> J[Quality Checks]
-    J --> K[Final Answer]
-```
+1. **User Query** → Query Classifier
+2. **Query Classification** → Strategy Selection:
+   - Factual → Dense Retrieval
+   - Analytical → Multi-Vector
+   - Complex → Hybrid Search
+   - Comparison → DPR Method
+3. **Cross-Encoder Reranking** → Response Generation
+4. **Quality Checks** → Final Answer
 
 ## 🔧 Configuration
 
@@ -311,9 +299,7 @@ ragas_results = evaluator.evaluate_generation(
 
 ### Privacy Features
 - Local processing options
-- Data encryption support
-- Audit logging
-- User consent management
+- Data security measures
 
 ## 🚀 Advanced Use Cases
 
@@ -398,7 +384,7 @@ python advanced_rag_system_part2.py
 
 ## 🤝 Contributing
 
-We welcome contributions! Areas for improvement:
+Contributions are welcome! Areas for improvement:
 
 - Additional retrieval strategies
 - New evaluation metrics
@@ -410,10 +396,6 @@ We welcome contributions! Areas for improvement:
 ```bash
 # Install development dependencies
 pip install -r requirements_advanced.txt
-pip install black flake8 pytest pytest-asyncio
-
-# Run tests
-pytest tests/
 
 # Format code
 black .
@@ -421,28 +403,11 @@ black .
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🎯 Roadmap
-
-### Version 2.1 (Coming Soon)
-- [ ] Multi-language support
-- [ ] Graph-based retrieval
-- [ ] Real-time streaming responses
-- [ ] Advanced caching mechanisms
-
-### Version 2.2
-- [ ] Federated search across multiple sources
-- [ ] Custom model fine-tuning
-- [ ] Advanced security features
-- [ ] Mobile-optimized interface
+This project is open source and available under the MIT License.
 
 ## 📞 Support
 
-- **Documentation**: [Full Documentation](docs/)
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- **Email**: support@your-domain.com
+- **Issues**: [GitHub Issues](https://github.com/saidulIslam1602/Retrieval-Augmented-Generation-Technique/issues)
 
 ## 🙏 Acknowledgments
 
@@ -456,8 +421,4 @@ This advanced RAG system builds upon excellent open-source projects:
 
 ---
 
-**Built with ❤️ for the RAG community**
-
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/your-repo/advanced-rag-system)](https://github.com/your-repo/advanced-rag-system) 
+**Built with ❤️ for the RAG community** 
